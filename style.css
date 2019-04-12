@@ -12,6 +12,7 @@ body {
 }
 
 .landing {
+    display: flex;
     position: relative;
     background-image: url('img/showcase.jpg');
     background-size: cover;
@@ -27,6 +28,10 @@ body {
     height: 100%;
     background: rgba(0, 0, 0, .7);
     text-align: center; 
+}
+
+.landing-inner img {
+    padding: 3rem 0 1rem;
 }
 
 .landing-inner h1 {
@@ -60,3 +65,36 @@ body {
         display: block;
         font-size: 1.5rem;
     }
+
+/* media queries for smaller screens */
+/* by width */
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 10px;
+    }
+    .landing img {
+        width: 70%;
+    }
+
+    .countdown div {
+        display: none;
+    }
+    .countdown div:first-child,
+    .countdown div:nth-child(2) {
+        display: block;
+    }
+}
+/* by height */
+@media screen and (max-height: 550px) {
+    .landing img {
+        width: 40%;
+    }
+
+    .landing p {
+        display: none;
+    }
+
+    .countdown div {
+        display: block;
+    }
+}
